@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find robotROS)/world/worldModel.world"/>
+  </include>
+  <node name="spawn_sdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find robotROS)/urdf/model.sdf -sdf -z 1 -model josh" />
+</launch>
